@@ -62,6 +62,7 @@
 				if (data[x] === 0){
 					logx('Next target: ' + x);
 					setTimeout(function() {
+						localStorage.setItem('scraper_target', x);
 						location.href = x;
 					}, 1000);
 					break;
@@ -94,6 +95,15 @@
 	}
 	
 	scan();
+	
+	//handle evil redirects
+	var lastTarget = localStorage.getItem('scraper_target');
+	if (lastTarget){
+		if (lastTarget !== location.href){
+			data[lastTarget] = 1;
+			save();
+		}
+	}
 
 	
 	var js1 = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js';

@@ -2,7 +2,7 @@
 /**
  * IIF
  */
-(function(){
+(function(SCRAPERCONFIG){
 
 	//store map of visited pages
 	var data = {};
@@ -167,4 +167,4 @@
 	});
 
 
-})();
+})(SCRAPERCONFIG);

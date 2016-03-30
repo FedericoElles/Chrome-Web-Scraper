@@ -1,9 +1,24 @@
 # Chrome-Web-Scraper
 Using html2canvas and a simple PHP endpoint, you can scrape full size screenshots with your browser - node.js not needed.
 
+## Prerequisites
+
+### Browser
+
+Install for Chrome **CustomJS**
+https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija  
+or for Firefox **Greasemonkey**
+https://addons.mozilla.org/de/firefox/addon/greasemonkey/
+
+### Endpoint to store images
+
+Add save.php to your server and remember the url
+
+
 
 ## Usage
 
+Add a new script to the website you wand to scrape
     
     var SCRAPERCONFIG = {
     	LSKEY: 'scraper',

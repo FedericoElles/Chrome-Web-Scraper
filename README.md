@@ -9,19 +9,8 @@ Using html2canvas and a simple PHP endpoint, you can scrape full size screenshot
     	LSKEY: 'scraper',
     	MAX: 1000,
     	PRINT_IN_IMG: true,
-    	BLACKLIST_URIs: ['/my/', '/sso/'],
-    	ENDPOINT: 'http://dienste.vhb.de/collector/save.php?name='
-    }
+    	BLACKLIST_URIs: ['/paywall/', '/evil/'],
+    	ENDPOINT: 'http://my.domain/save.php?name=''
+    };
     
-    function loadScript(url, callback)
-    {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = url;
-        script.onreadystatechange = callback;
-        script.onload = callback;
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
-    
-    
-    loadScript('https://rawgit.com/FedericoElles/Chrome-Web-Scraper/master/scraper.js', function(){});
+    (function(){var s=document.createElement('script');s.type='text/javascript';s.src='https://rawgit.com/FedericoElles/Chrome-Web-Scraper/master/scraper.js';document.getElementsByTagName('head')[0].appendChild(s);})();

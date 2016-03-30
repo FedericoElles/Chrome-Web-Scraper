@@ -81,6 +81,7 @@
 	}
 	
 	
+	logx('Chrome Web Scrapper v0.1');
 	logx('Stop scraper by typing "halt=1" into console.');
 	
 	var dataStaging = localStorage.getItem(SCRAPERCONFIG.LSKEY || 'scraper');
@@ -100,6 +101,7 @@
 	var lastTarget = localStorage.getItem('scraper_target');
 	if (lastTarget){
 		if (lastTarget !== location.href){
+			logx('Redirect found: marked as done: ' + lastTarget);
 			data[lastTarget] = 1;
 			save();
 		}

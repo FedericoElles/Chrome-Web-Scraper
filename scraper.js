@@ -89,6 +89,10 @@
 	}
 	logx('Loading data: ' + Object.keys(data).length);
 	
+	if (typeof data[location.href] === 'undefined'){
+		data[location.href] = 0;
+	}
+	
 	scan();
 
 	

@@ -90,7 +90,7 @@
 	}
 	
 	
-	logx('Chrome Web Scrapper v0.1');
+	logx('Chrome Web Scrapper v0.2');
 	logx('Stop scraper by typing "halt=1" into console.');
 	
 	var dataStaging = localStorage.getItem(SCRAPERCONFIG.LSKEY || 'scraper');

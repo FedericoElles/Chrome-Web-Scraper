@@ -31,8 +31,7 @@
 					}
 					
 					if (uri && (uri[0] === '/' || uri.indexOf(location.hostname) > -1 && valid)){
-						//console.log($(link).text() + ':\n  ' + uri);
-						console.log(uri);
+						//console.log(uri);
 						if (typeof data[uri] === 'undefined'){
 							data[uri] = 0;
 							
